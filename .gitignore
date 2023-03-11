@@ -3,4 +3,5 @@
 a.out
 .vscode/
 *.txt
+!secret.txt
 *.o
