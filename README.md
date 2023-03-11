@@ -1,6 +1,7 @@
 # LSB-Steganography
 
 Usage: Encoding: ./a.out -e <.bmp_file> <.txt_file> [output file]
+
 Usage: Decoding: ./a.out -d <.bmp_file> [output file]
 
 Approach: 
