@@ -1,0 +1,6 @@
+*.code-workspace
+*.pdf
+a.out
+.vscode/
+*.txt
+*.o
