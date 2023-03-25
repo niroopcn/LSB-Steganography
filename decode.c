@@ -196,7 +196,7 @@ uint extract_int_from_image(FILE *fptr_stego_image)
 	char buffer[DEC_MAX_FILE_SIZE_BUFFER]; // 32 bytes
 	int temp_buffer = 0;
 	fread(buffer, 32, 1, fptr_stego_image);
-	if (!extract_lsb_from_int(&temp_buffer, buffer))
+	extract_lsb_from_int(&temp_buffer, buffer);
 		return temp_buffer;
 }
 

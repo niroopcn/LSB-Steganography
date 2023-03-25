@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <strings.h>
 #include "encode.h"
 #include "types.h"
 #include "common.h"
@@ -266,8 +267,8 @@ Status encode_magic_string(const char *magic_string, EncodeInfo *encInfo)
 	if (!encode_data_to_image(magic_string, strlen(magic_string), encInfo->fptr_src_image, encInfo->fptr_stego_image))
 	{
 		printf("[INFO] Done\n");
-		return e_success;
 	}
+	return e_success;
 }
 
 // Function to encode integer value of secret file extn size to stego output image
@@ -281,8 +282,8 @@ Status encode_secret_file_extn_size(EncodeInfo *encInfo)
 	if (!encode_size(extsize, encInfo->fptr_src_image, encInfo->fptr_stego_image))
 	{
 		printf("[INFO] Done\n");
-		return e_success;
 	}
+	return e_success;
 }
 
 /*Function to encode strings to stego output image,
@@ -332,8 +333,8 @@ Status encode_secret_file_size(long file_size, EncodeInfo *encInfo)
 	if (!encode_size((int)file_size, encInfo->fptr_src_image, encInfo->fptr_stego_image))
 	{
 		printf("[INFO] Done\n");
-		return e_success;
 	}
+	return e_success;
 }
 
 /*Function to encode an integer value to stego output image
