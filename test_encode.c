@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
 		    if (argc >= 4)
 		    {
 			EncodeInfo encInfo;							//declare encInfo variable for structure
+			memset(&encInfo, 0, sizeof(encInfo));
 			printf("[INFO] Encoding Selected\n[INFO] Validating Arguments...\n");
 			if (!read_and_validate_encode_args(argv, &encInfo))			//func. call to read and validate CLA
 			{
@@ -45,6 +46,7 @@ int main(int argc, char *argv[])
 	    case 1:					//case for decoding
 		{
 		    DecodeInfo decInfo;								//declare decInfo structure variable
+			memset(&decInfo, 0, sizeof(decInfo));
 		    printf("[INFO] Decoding Selected\n[INFO] Validating arguments\n");
 		    if (!read_and_validate_decode_args(argv, &decInfo))				//func. call to read and validate CLA
 		    {
